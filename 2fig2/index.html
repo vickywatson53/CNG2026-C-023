@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cb91e6b1192a1edc41acf51381fb717f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<style>
+    #leyenda-mapa {
+        position: fixed; 
+        bottom: 30px; 
+        left: 30px; 
+        width: 380px; 
+        max-width: 90vw;
+        background-color: rgba(255, 255, 255, 0.95); 
+        border: 1px solid #d1d8e0; 
+        border-radius: 6px; 
+        padding: 20px; 
+        z-index: 9999; 
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1); 
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        max-height: 40vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    /* Reglas específicas para pantallas de celular */
+    @media (max-width: 768px) {
+        #leyenda-mapa {
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85vw;
+            padding: 15px;
+        }
+        #leyenda-mapa h3 { font-size: 16px !important; }
+        #leyenda-mapa p { font-size: 12px !important; }
+        #leyenda-mapa h4 { font-size: 12px !important; }
+        #leyenda-mapa ul { font-size: 11px !important; }
+    }
+</style>
+
+<div id="leyenda-mapa">
+    <h3 style="margin-top: 0; color: #333; font-size: 18px;">Trayectorias Poblacionales</h3>
+    <p style="font-size: 13px; color: #555; line-height: 1.5; text-align: justify;">
+        Comparativa de secuencias genómicas de poblaciones prehispánicas con grupos mestizos actuales. Esto permite reconstruir trayectorias demográficas antes y después del contacto europeo.
+    </p>
+    <div style="background-color: #E2EFDA; padding: 10px; border-left: 4px solid #548235; margin-top: 15px;">
+        <h4 style="margin: 0 0 5px 0; color: #548235; font-size: 13px;">Exploración:</h4>
+        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #333;">
+            <li>Pellizque la pantalla para hacer zoom.</li>
+            <li>Arrastre para desplazarse por el territorio.</li>
+            <li><b>Toque los marcadores</b> para ver la muestra.</li>
+        </ul>
+    </div>
+</div>
+    
+            <div class="folium-map" id="map_cb91e6b1192a1edc41acf51381fb717f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cb91e6b1192a1edc41acf51381fb717f = L.map(
+                "map_cb91e6b1192a1edc41acf51381fb717f",
+                {
+                    center: [26.5, -108.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b0d8926f697168896b2a71193cd5c28c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b0d8926f697168896b2a71193cd5c28c.addTo(map_cb91e6b1192a1edc41acf51381fb717f);
+        
+    
+            var marker_d297912996d248da63999af606007753 = L.marker(
+                [19.4326, -99.1332],
+                {
+}
+            ).addTo(map_cb91e6b1192a1edc41acf51381fb717f);
+        
+    
+            var icon_a16d19873ced51b4b50f7a3f9ef7c36f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "landmark",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e9405e63a9683b05708ca4d132f94b0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_658b0a5f59c5367f44c86fce9ea9eb39 = $(`<div id="html_658b0a5f59c5367f44c86fce9ea9eb39" style="width: 100.0%; height: 100.0%;"> <div style="width: 200px; font-family: 'Helvetica Neue', Arial, sans-serif;">     <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo (Prehispánico)</h4>     <p style="font-size: 12px; color: #333;">Secuencias genómicas anteriores al contacto europeo.</p>     <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Referencia:</b><br>     <a href="https://www.science.org/doi/10.1126/science.add6142" target="_blank" style="color: #C00000; text-decoration: none;">Villa-Islas et al. (2023). <i>Science</i>.</a></p> </div> </div>`)[0];
+                popup_9e9405e63a9683b05708ca4d132f94b0.setContent(html_658b0a5f59c5367f44c86fce9ea9eb39);
+            
+        
+
+        marker_d297912996d248da63999af606007753.bindPopup(popup_9e9405e63a9683b05708ca4d132f94b0)
+        ;
+
+        
+    
+    
+                marker_d297912996d248da63999af606007753.setIcon(icon_a16d19873ced51b4b50f7a3f9ef7c36f);
+            
+    
+            var marker_774bd4197712d70d983423f263523ba2 = L.marker(
+                [34.0522, -118.2437],
+                {
+}
+            ).addTo(map_cb91e6b1192a1edc41acf51381fb717f);
+        
+    
+            var icon_1ca1844d6d327107fc8fc868e0153a30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "users",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b43de6d014dc4dab5e0f6d6441709939 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_61161f594789220e59a29273a6dfce93 = $(`<div id="html_61161f594789220e59a29273a6dfce93" style="width: 100.0%; height: 100.0%;"> <div style="width: 200px; font-family: 'Helvetica Neue', Arial, sans-serif;">     <h4 style="color: #00B050; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Contemporáneo (MXL)</h4>     <p style="font-size: 12px; color: #333;">Secuencias de grupos mestizos actuales.</p>     <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Referencia:</b><br>     <a href="https://www.nature.com/articles/nature15393" target="_blank" style="color: #00B050; text-decoration: none;">Proyecto 1000 Genomas (2015). <i>Nature</i>.</a></p> </div> </div>`)[0];
+                popup_b43de6d014dc4dab5e0f6d6441709939.setContent(html_61161f594789220e59a29273a6dfce93);
+            
+        
+
+        marker_774bd4197712d70d983423f263523ba2.bindPopup(popup_b43de6d014dc4dab5e0f6d6441709939)
+        ;
+
+        
+    
+    
+                marker_774bd4197712d70d983423f263523ba2.setIcon(icon_1ca1844d6d327107fc8fc868e0153a30);
+            
+</script>
+</html>
