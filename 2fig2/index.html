@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_0273cddb345fe9038197abbc0c52d958 {
+                #map_7b50ac8157e72491c0fbf6a414ee5b1c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -70,7 +70,7 @@
 <div id="leyenda-mapa">
     <h3 style="margin-top: 0; color: #333; font-size: 18px;">Regiones de Muestreo Genómico</h3>
     <p style="font-size: 13px; color: #555; line-height: 1.5; text-align: justify;">
-        Ubicación geográfica de las cohortes analizadas. El ADN prehispánico corresponde a yacimientos del Centro de México (limitado a las 4 muestras validadas: ERR9128942, ERR9576891, ERR9169797, ERR9169799), contrastado con poblaciones contemporáneas (MXL).
+        Ubicación geográfica de las cohortes analizadas. El ADN prehispánico corresponde a yacimientos de <b>Tlatelolco y Teotihuacán</b>, contrastado con la población contemporánea de <b>Ascendencia Mexicana (MXL)</b> del Proyecto 1000 Genomas.
     </p>
     <div style="background-color: #E2EFDA; padding: 10px; border-left: 4px solid #548235; margin-top: 15px;">
         <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #333;">
@@ -80,16 +80,16 @@
     </div>
 </div>
     
-            <div class="folium-map" id="map_0273cddb345fe9038197abbc0c52d958" ></div>
+            <div class="folium-map" id="map_7b50ac8157e72491c0fbf6a414ee5b1c" ></div>
         
 </body>
 <script>
     
     
-            var map_0273cddb345fe9038197abbc0c52d958 = L.map(
-                "map_0273cddb345fe9038197abbc0c52d958",
+            var map_7b50ac8157e72491c0fbf6a414ee5b1c = L.map(
+                "map_7b50ac8157e72491c0fbf6a414ee5b1c",
                 {
-                    center: [26.5, -108.0],
+                    center: [24.0, -104.0],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 5,
@@ -104,7 +104,7 @@
 
         
     
-            var tile_layer_13c01b46d52045c8221d45cc320edce0 = L.tileLayer(
+            var tile_layer_27606627f0ff55f0edb988c77211122d = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -121,17 +121,17 @@
             );
         
     
-            tile_layer_13c01b46d52045c8221d45cc320edce0.addTo(map_0273cddb345fe9038197abbc0c52d958);
+            tile_layer_27606627f0ff55f0edb988c77211122d.addTo(map_7b50ac8157e72491c0fbf6a414ee5b1c);
         
     
-            var marker_d1c163dbbc51ed4cdecf53b69a105758 = L.marker(
+            var marker_29b3d37aa90b90c05ca04d22e6fc6ccf = L.marker(
                 [19.451, -99.137],
                 {
 }
-            ).addTo(map_0273cddb345fe9038197abbc0c52d958);
+            ).addTo(map_7b50ac8157e72491c0fbf6a414ee5b1c);
         
     
-            var icon_da90a09e21964ed92cd24e0d059da3a0 = L.AwesomeMarkers.icon(
+            var icon_6c7ba0262ee10b5145f6e5bcb2081ad3 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "darkred",
   "iconColor": "white",
@@ -142,34 +142,34 @@
             );
         
     
-        var popup_2e710550e30d96e8acca1854980e4aaf = L.popup({
+        var popup_ab21858872968e5724df680063b3938d = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_9b091e7c8157b824fade575cd4980cc9 = $(`<div id="html_9b091e7c8157b824fade575cd4980cc9" style="width: 100.0%; height: 100.0%;">     <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">         <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo</h4>         <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Tlatelolco (Centro de México)</p>         <p style="font-size: 11px; color: #555; margin-top: 0;"><b>Muestras filtradas:</b><br>ERR9128942, ERR9576891</p>         <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> Villa-Islas et al. (2023)</p>     </div>     </div>`)[0];
-                popup_2e710550e30d96e8acca1854980e4aaf.setContent(html_9b091e7c8157b824fade575cd4980cc9);
+                var html_79fc62d56af3fbcb028137c2edbbdab3 = $(`<div id="html_79fc62d56af3fbcb028137c2edbbdab3" style="width: 100.0%; height: 100.0%;">     <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">         <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo</h4>         <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Tlatelolco</p>         <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> Villa-Islas et al. (2023)</p>     </div>     </div>`)[0];
+                popup_ab21858872968e5724df680063b3938d.setContent(html_79fc62d56af3fbcb028137c2edbbdab3);
             
         
 
-        marker_d1c163dbbc51ed4cdecf53b69a105758.bindPopup(popup_2e710550e30d96e8acca1854980e4aaf)
+        marker_29b3d37aa90b90c05ca04d22e6fc6ccf.bindPopup(popup_ab21858872968e5724df680063b3938d)
         ;
 
         
     
     
-                marker_d1c163dbbc51ed4cdecf53b69a105758.setIcon(icon_da90a09e21964ed92cd24e0d059da3a0);
+                marker_29b3d37aa90b90c05ca04d22e6fc6ccf.setIcon(icon_6c7ba0262ee10b5145f6e5bcb2081ad3);
             
     
-            var marker_08211f37c80272fc7786ee0dcbc3f21d = L.marker(
+            var marker_aaa1de5b75c7e8ead1bf65ca8d005c7e = L.marker(
                 [19.6922, -98.8436],
                 {
 }
-            ).addTo(map_0273cddb345fe9038197abbc0c52d958);
+            ).addTo(map_7b50ac8157e72491c0fbf6a414ee5b1c);
         
     
-            var icon_7f0c3190529c9695a0a46aad66206e30 = L.AwesomeMarkers.icon(
+            var icon_8c6f9e921de890f0b7de7abf60c63d75 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "darkred",
   "iconColor": "white",
@@ -180,34 +180,34 @@
             );
         
     
-        var popup_2e29983509ca59dcba1daee25384c6ac = L.popup({
+        var popup_f24079cea70e4b01ccf6cb9b32fd8766 = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_13d07a510113ab0a081b5320c1340d00 = $(`<div id="html_13d07a510113ab0a081b5320c1340d00" style="width: 100.0%; height: 100.0%;">     <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">         <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo</h4>         <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Teotihuacán (Estado de México)</p>         <p style="font-size: 11px; color: #555; margin-top: 0;"><b>Muestras filtradas:</b><br>ERR9169797, ERR9169799</p>         <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> Villa-Islas et al. (2023)</p>     </div>     </div>`)[0];
-                popup_2e29983509ca59dcba1daee25384c6ac.setContent(html_13d07a510113ab0a081b5320c1340d00);
+                var html_b03cf5d66e4becd6d6f56ccd2090a21b = $(`<div id="html_b03cf5d66e4becd6d6f56ccd2090a21b" style="width: 100.0%; height: 100.0%;">     <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">         <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo</h4>         <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Teotihuacán</p>         <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> Villa-Islas et al. (2023)</p>     </div>     </div>`)[0];
+                popup_f24079cea70e4b01ccf6cb9b32fd8766.setContent(html_b03cf5d66e4becd6d6f56ccd2090a21b);
             
         
 
-        marker_08211f37c80272fc7786ee0dcbc3f21d.bindPopup(popup_2e29983509ca59dcba1daee25384c6ac)
+        marker_aaa1de5b75c7e8ead1bf65ca8d005c7e.bindPopup(popup_f24079cea70e4b01ccf6cb9b32fd8766)
         ;
 
         
     
     
-                marker_08211f37c80272fc7786ee0dcbc3f21d.setIcon(icon_7f0c3190529c9695a0a46aad66206e30);
+                marker_aaa1de5b75c7e8ead1bf65ca8d005c7e.setIcon(icon_8c6f9e921de890f0b7de7abf60c63d75);
             
     
-            var marker_f10ec0ed610cac4e3519d8343f97dd48 = L.marker(
+            var marker_56b7c2007ff7fc2dd6bd9e831da62aec = L.marker(
                 [34.0522, -118.2437],
                 {
 }
-            ).addTo(map_0273cddb345fe9038197abbc0c52d958);
+            ).addTo(map_7b50ac8157e72491c0fbf6a414ee5b1c);
         
     
-            var icon_8c2bf2985cf9ff8f210eeb026317ed16 = L.AwesomeMarkers.icon(
+            var icon_4da3b23692df1bac8ef3e716ababacbd = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -218,24 +218,24 @@
             );
         
     
-        var popup_a219ff1b4d14f6894afb69e2aa862121 = L.popup({
+        var popup_aa82a7f11364d59fc80a9525437833f8 = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_9e7a72f8cbccf5bd9f28afb0380f274a = $(`<div id="html_9e7a72f8cbccf5bd9f28afb0380f274a" style="width: 100.0%; height: 100.0%;"> <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">     <h4 style="color: #00B050; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Contemporáneo</h4>     <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Los Ángeles, California (MXL)</p>     <p style="font-size: 11px; color: #555; margin-top: 0;"><b>Cohorte:</b> Mexicanos en Los Ángeles</p>     <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> 1000 Genomas (2015)</p> </div> </div>`)[0];
-                popup_a219ff1b4d14f6894afb69e2aa862121.setContent(html_9e7a72f8cbccf5bd9f28afb0380f274a);
+                var html_3a8feae9c5208c947d76f74431b6f0cf = $(`<div id="html_3a8feae9c5208c947d76f74431b6f0cf" style="width: 100.0%; height: 100.0%;"> <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">     <h4 style="color: #00B050; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Contemporáneo</h4>     <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Cohorte:</b> Ascendencia Mexicana (MXL)</p>     <p style="font-size: 11px; color: #555; margin-top: 0;"><b>Ubicación:</b> Los Ángeles, California (MXL)</p>     <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> Proyecto 1000 Genomas (2015)</p> </div> </div>`)[0];
+                popup_aa82a7f11364d59fc80a9525437833f8.setContent(html_3a8feae9c5208c947d76f74431b6f0cf);
             
         
 
-        marker_f10ec0ed610cac4e3519d8343f97dd48.bindPopup(popup_a219ff1b4d14f6894afb69e2aa862121)
+        marker_56b7c2007ff7fc2dd6bd9e831da62aec.bindPopup(popup_aa82a7f11364d59fc80a9525437833f8)
         ;
 
         
     
     
-                marker_f10ec0ed610cac4e3519d8343f97dd48.setIcon(icon_8c2bf2985cf9ff8f210eeb026317ed16);
+                marker_56b7c2007ff7fc2dd6bd9e831da62aec.setIcon(icon_4da3b23692df1bac8ef3e716ababacbd);
             
 </script>
 </html>
