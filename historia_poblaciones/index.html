@@ -2,44 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Historia Demográfica Prehispánica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Demográfica y Genómica en Mesoamérica</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap');
-        
         body { background-color: #F2E8CF; font-family: 'Nunito', sans-serif; margin: 0; padding: 20px; color: #2B2B2B; }
-        .header { text-align: center; border-bottom: 4px solid #2B2B2B; padding-bottom: 15px; margin-bottom: 25px; border-radius: 5px; }
-        .header h1 { font-family: 'Fredoka', sans-serif; color: #BC4749; font-size: 26px; margin: 0; text-transform: uppercase; letter-spacing: 1px; text-shadow: 2px 2px 0px rgba(0,0,0,0.1); }
-        .header p { font-size: 14px; color: #386641; font-weight: bold; margin-top: 8px; }
         
-        /* Contenedor Flex para las tarjetas */
-        .cards-container { display: flex; flex-direction: column; gap: 25px; max-width: 900px; margin: 0 auto; }
+        .header { text-align: center; border-bottom: 4px solid #2B2B2B; padding-bottom: 15px; margin-bottom: 25px; }
+        .header h1 { font-family: 'Fredoka', sans-serif; color: #BC4749; font-size: 20px; margin: 0; line-height: 1.3; text-shadow: 1px 1px 0px rgba(0,0,0,0.1); }
+        .header p.autores { font-size: 14px; font-weight: bold; color: #2B2B2B; margin: 10px 0 5px 0; }
+        .header p.afiliacion { font-size: 11px; color: #386641; margin: 2px 0; }
         
-        /* Estilo Caricatura para las Tarjetas */
-        .card {
-            background: white; border: 4px solid #2B2B2B; border-radius: 20px;
-            padding: 20px; box-shadow: 6px 6px 0px #2B2B2B;
-            transition: transform 0.2s ease; position: relative;
-        }
+        .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        
+        .card { background: white; border: 4px solid #2B2B2B; border-radius: 20px; padding: 20px; box-shadow: 6px 6px 0px #2B2B2B; transition: transform 0.2s ease; }
         .card:active { transform: translate(4px, 4px); box-shadow: 2px 2px 0px #2B2B2B; }
         
-        .card h2 { font-family: 'Fredoka', sans-serif; color: #2B2B2B; font-size: 22px; margin-top: 10px; text-align: center; }
-        .muestras { text-align: center; font-size: 13px; font-weight: bold; color: #2B2B2B; background: #F2A65A; padding: 6px 12px; border: 2px solid #2B2B2B; border-radius: 12px; width: fit-content; margin: 0 auto 15px auto; }
-        .texto { font-size: 15px; line-height: 1.6; text-align: justify; padding: 0 10px; }
+        .card h2 { font-family: 'Fredoka', sans-serif; color: #2B2B2B; font-size: 20px; margin: 10px 0; text-align: center; white-space: pre-line; }
+        .muestras { text-align: center; font-size: 12px; font-weight: bold; color: #2B2B2B; background: #F2A65A; padding: 6px 12px; border: 2px solid #2B2B2B; border-radius: 12px; width: fit-content; margin: 0 auto 15px auto; }
+        .texto { font-size: 14px; line-height: 1.6; text-align: justify; }
         
-        .conclusion { 
-            background: #386641; border: 4px solid #2B2B2B; color: white; padding: 20px; 
-            border-radius: 15px; margin: 30px auto 0 auto; max-width: 900px; font-size: 15px; 
-            box-shadow: 6px 6px 0px #2B2B2B; text-align: center; line-height: 1.5;
-        }
-        
-        @media (min-width: 768px) { .cards-container { flex-direction: row; } .card { flex: 1; } }
+        .conclusion { background: #386641; border: 4px solid #2B2B2B; color: white; padding: 15px; border-radius: 15px; margin: 30px auto 0 auto; max-width: 1200px; font-size: 14px; box-shadow: 6px 6px 0px #2B2B2B; text-align: center; line-height: 1.5; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Historia y Continuidad Genómica</h1>
-        <p>Cohortes de ADN Antiguo y Contemporáneo (MXL)</p>
+        <h1>DINÁMICA DE LA ESTRUCTURA GENÉTICA EN MESOAMÉRICA: UN ESTUDIO COMPARATIVO TRANS-TEMPORAL ENTRE EL ADN ANTIGUO PREHISPÁNICO Y LAS POBLACIONES ORIGINARIAS DE MÉXICO.</h1>
+        <p class="autores">Campos-García, Victoria Edwina1°, García Ortiz, Humberto2, Orozco Ororzco, Lorena Sofía3*</p>
+        <p class="afiliacion">1° Instituto Nacional de Medicina Genómica (Lab. Inmunogenómica y Enf. Metabólicas). Universidad Nacional Autónoma de México-Facultad de Estudios Superiores Cuautitlán, Ciudad de México, México</p>
+        <p class="afiliacion">2, 3* Instituto Nacional de Medicina Genómica (Lab. Inmunogenómica y Enf. Metabólicas), Ciudad de México, México</p>
     </div>
 
     <div class="cards-container">
@@ -54,11 +45,11 @@
     <line x1="40" y1="64" x2="60" y2="64" stroke="#2B2B2B" stroke-width="3"/>
 </svg>
 
-            <h2>TEOTIHUACÁN (Periodo Clásico)</h2>
+            <h2>TEOTIHUACÁN
+(Periodo Clásico)</h2>
             <div class="muestras">Muestras: ERR9169797, ERR9169799</div>
-            <div class="texto">La majestuosa 'Ciudad de los Dioses' fue una urbe pluriétnica que floreció entre los años 200 y 650 d.C. Experimentó un colapso dramático con incendios masivos y abandono. Sin embargo, el ADN de sus habitantes revela que no se extinguieron: las poblaciones se dispersaron y reorganizaron, logrando que su raíz genética sobreviviera en el Centro de México.</div>
+            <div class="texto">La 'Ciudad de los Dioses' fue una urbe pluriétnica (200 - 650 d.C.) que sufrió un colapso dramático. El ADN de sus habitantes revela que no se extinguieron: las poblaciones se dispersaron y reorganizaron, permitiendo que su raíz genética ancestral sobreviviera en la región.</div>
         </div>
-
         <div class="card">
             
 <svg viewBox="0 0 100 80" width="100%" height="150px">
@@ -67,16 +58,36 @@
     <rect x="30" y="10" width="16" height="15" fill="#BC4749" stroke="#2B2B2B" stroke-width="3" rx="2"/>
     <rect x="54" y="10" width="16" height="15" fill="#F2A65A" stroke="#2B2B2B" stroke-width="3" rx="2"/>
     <rect x="42" y="25" width="16" height="50" fill="#F2E8CF" stroke="#2B2B2B" stroke-width="3" rx="2"/>
-    <line x1="50" y1="25" x2="50" y2="75" stroke="#2B2B2B" stroke-width="3"/> </svg>
+    <line x1="50" y1="25" x2="50" y2="75" stroke="#2B2B2B" stroke-width="3"/> 
+</svg>
 
-            <h2>TLATELOLCO (Periodo Posclásico)</h2>
+            <h2>TLATELOLCO
+(Periodo Posclásico)</h2>
             <div class="muestras">Muestras: ERR9128942, ERR9576891</div>
-            <div class="texto">Ciudad gemela de Tenochtitlan (1200 - 1521 d.C.) y el mercado más grande del Imperio Mexica. Aunque atrajo migraciones, prisioneros y tributos de toda Mesoamérica, el análisis genómico demuestra que la estructura poblacional basal se mantuvo sumamente estable, heredando la firma genética de la época clásica.</div>
+            <div class="texto">Centro comercial del Imperio Mexica (1200 - 1521 d.C.). A pesar de atraer migraciones y tributos de toda Mesoamérica, el análisis genómico demuestra que la estructura poblacional basal del Valle de México se mantuvo estable, heredando la firma del periodo clásico.</div>
+        </div>
+        <div class="card">
+            
+<svg viewBox="0 0 100 80" width="100%" height="150px">
+    <!-- Árbol de la vida / Linaje Genético -->
+    <path d="M 40 80 Q 50 40 30 20" fill="none" stroke="#BC4749" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 60 80 Q 50 40 70 20" fill="none" stroke="#BC4749" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 50 80 L 50 15" fill="none" stroke="#BC4749" stroke-width="6" stroke-linecap="round"/>
+    <!-- Hojas/Raíces -->
+    <circle cx="30" cy="20" r="6" fill="#386641" stroke="#2B2B2B" stroke-width="3"/>
+    <circle cx="70" cy="20" r="6" fill="#386641" stroke="#2B2B2B" stroke-width="3"/>
+    <circle cx="50" cy="15" r="8" fill="#F2A65A" stroke="#2B2B2B" stroke-width="3"/>
+    <!-- Base -->
+    <path d="M 25 80 L 75 80" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+</svg>
+
+            <h2>CONTEMPORÁNEO
+(Cohorte MXL)</h2>
+            <div class="muestras">Proyecto 1000 Genomas (AMR)</div>
+            <div class="texto">La cohorte MXL (Mexican Ancestry) representa a poblaciones mestizas actuales. A pesar del intenso flujo génico post-contacto derivado de la colonización, los análisis reafirman una robusta retención de la firma genética indígena, comprobando la continuidad biológica.</div>
         </div>
     </div>
 
-    <div class="conclusion">
-        <strong>Hallazgo Genómico (Villa-Islas et al., 2023): Se documenta una asombrosa continuidad demográfica en el Centro de México. La estructura genética ancestral resistió colapsos imperiales y reorganizaciones sociopolíticas durante más de mil años antes del contacto europeo.</strong>
-    </div>
+    <div class="conclusion"><strong>Conclusión (Villa-Islas et al., 2023 / 1000 Genomes Project): La estructura genética ancestral resistió colapsos imperiales prehispánicos y la posterior colonización europea, demostrando una notable continuidad demográfica trans-temporal en el Centro de México.</strong></div>
 </body>
 </html>
