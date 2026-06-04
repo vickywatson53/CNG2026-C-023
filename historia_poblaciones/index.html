@@ -2,41 +2,66 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia Demográfica y Genómica en Mesoamérica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Historia Demográfica y Genómica</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap');
-        body { background-color: #F2E8CF; font-family: 'Nunito', sans-serif; margin: 0; padding: 20px; color: #2B2B2B; }
+        
+        body { background-color: #F2E8CF; font-family: 'Nunito', sans-serif; margin: 0; padding: 15px; color: #2B2B2B; overflow-x: hidden; }
         
         .header { text-align: center; border-bottom: 4px solid #2B2B2B; padding-bottom: 15px; margin-bottom: 25px; }
-        .header h1 { font-family: 'Fredoka', sans-serif; color: #BC4749; font-size: 20px; margin: 0; line-height: 1.3; text-shadow: 1px 1px 0px rgba(0,0,0,0.1); }
-        .header p.autores { font-size: 14px; font-weight: bold; color: #2B2B2B; margin: 10px 0 5px 0; }
+        .header h1 { font-family: 'Fredoka', sans-serif; color: #BC4749; font-size: 18px; margin: 0; line-height: 1.3; text-shadow: 1px 1px 0px rgba(0,0,0,0.1); }
+        .header p.autores { font-size: 13px; font-weight: bold; color: #2B2B2B; margin: 10px 0 5px 0; }
         .header p.afiliacion { font-size: 11px; color: #386641; margin: 2px 0; }
+        sup { font-size: 0.75em; vertical-align: super; }
         
         .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
         
-        .card { background: white; border: 4px solid #2B2B2B; border-radius: 20px; padding: 20px; box-shadow: 6px 6px 0px #2B2B2B; transition: transform 0.2s ease; }
-        .card:active { transform: translate(4px, 4px); box-shadow: 2px 2px 0px #2B2B2B; }
+        /* Animación de destello suave y flotación para tarjetas en celular */
+        @keyframes respirar {
+            0% { box-shadow: 4px 4px 0px #2B2B2B; }
+            50% { box-shadow: 8px 8px 15px rgba(188, 71, 73, 0.4); transform: translateY(-3px); }
+            100% { box-shadow: 4px 4px 0px #2B2B2B; }
+        }
+        @keyframes flotarSvg {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
         
-        .card h2 { font-family: 'Fredoka', sans-serif; color: #2B2B2B; font-size: 20px; margin: 10px 0; text-align: center; white-space: pre-line; }
+        .card { 
+            background: white; border: 4px solid #2B2B2B; border-radius: 20px; padding: 20px; 
+            animation: respirar 4s infinite ease-in-out;
+        }
+        /* Desfasar animaciones para que no se muevan al mismo tiempo */
+        .card:nth-child(2) { animation-delay: 1s; }
+        .card:nth-child(3) { animation-delay: 2s; }
+        
+        .dibujo-animado { animation: flotarSvg 3s infinite ease-in-out; }
+        
+        .card h2 { font-family: 'Fredoka', sans-serif; color: #2B2B2B; font-size: 18px; margin: 10px 0; text-align: center; white-space: pre-line; }
         .muestras { text-align: center; font-size: 12px; font-weight: bold; color: #2B2B2B; background: #F2A65A; padding: 6px 12px; border: 2px solid #2B2B2B; border-radius: 12px; width: fit-content; margin: 0 auto 15px auto; }
         .texto { font-size: 14px; line-height: 1.6; text-align: justify; }
         
-        .conclusion { background: #386641; border: 4px solid #2B2B2B; color: white; padding: 15px; border-radius: 15px; margin: 30px auto 0 auto; max-width: 1200px; font-size: 14px; box-shadow: 6px 6px 0px #2B2B2B; text-align: center; line-height: 1.5; }
+        .conclusion { 
+            background: #386641; border: 4px solid #2B2B2B; color: white; padding: 15px; border-radius: 15px; 
+            margin: 30px auto 0 auto; max-width: 1200px; font-size: 14px; box-shadow: 4px 4px 0px #2B2B2B; 
+            text-align: center; line-height: 1.5;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>DINÁMICA DE LA ESTRUCTURA GENÉTICA EN MESOAMÉRICA: UN ESTUDIO COMPARATIVO TRANS-TEMPORAL ENTRE EL ADN ANTIGUO PREHISPÁNICO Y LAS POBLACIONES ORIGINARIAS DE MÉXICO.</h1>
-        <p class="autores">Campos-García, Victoria Edwina1°, García Ortiz, Humberto2, Orozco Ororzco, Lorena Sofía3*</p>
-        <p class="afiliacion">1° Instituto Nacional de Medicina Genómica (Lab. Inmunogenómica y Enf. Metabólicas). Universidad Nacional Autónoma de México-Facultad de Estudios Superiores Cuautitlán, Ciudad de México, México</p>
-        <p class="afiliacion">2, 3* Instituto Nacional de Medicina Genómica (Lab. Inmunogenómica y Enf. Metabólicas), Ciudad de México, México</p>
+        <p class="autores">Campos-García, Victoria Edwina<sup>1°</sup>, García Ortiz, Humberto<sup>2</sup>, Orozco Orozco, Lorena Sofía<sup>3*</sup></p>
+        <p class="afiliacion"><sup>1°</sup> Instituto Nacional de Medicina Genómica (Lab. Inmunogenómica y Enf. Metabólicas). Universidad Nacional Autónoma de México-Facultad de Estudios Superiores Cuautitlán, Ciudad de México, México</p>
+        <p class="afiliacion"><sup>2, 3*</sup> Instituto Nacional de Medicina Genómica (Lab. Inmunogenómica y Enf. Metabólicas), Ciudad de México, México</p>
     </div>
 
     <div class="cards-container">
         <div class="card">
             
-<svg viewBox="0 0 100 80" width="100%" height="150px">
+<svg class="dibujo-animado" viewBox="0 0 100 80" width="100%" height="150px">
     <circle cx="20" cy="20" r="10" fill="#F2A65A" stroke="#2B2B2B" stroke-width="3"/>
     <path d="M 5 75 L 95 75 L 75 40 L 25 40 Z" fill="#BC4749" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
     <path d="M 20 40 L 80 40 L 65 15 L 35 15 Z" fill="#BC4749" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
@@ -52,7 +77,7 @@
         </div>
         <div class="card">
             
-<svg viewBox="0 0 100 80" width="100%" height="150px">
+<svg class="dibujo-animado" viewBox="0 0 100 80" width="100%" height="150px">
     <path d="M 5 75 L 95 75 L 85 45 L 15 45 Z" fill="#386641" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
     <path d="M 20 45 L 80 45 L 75 25 L 25 25 Z" fill="#386641" stroke="#2B2B2B" stroke-width="4" stroke-linejoin="round"/>
     <rect x="30" y="10" width="16" height="15" fill="#BC4749" stroke="#2B2B2B" stroke-width="3" rx="2"/>
@@ -68,16 +93,13 @@
         </div>
         <div class="card">
             
-<svg viewBox="0 0 100 80" width="100%" height="150px">
-    <!-- Árbol de la vida / Linaje Genético -->
+<svg class="dibujo-animado" viewBox="0 0 100 80" width="100%" height="150px">
     <path d="M 40 80 Q 50 40 30 20" fill="none" stroke="#BC4749" stroke-width="6" stroke-linecap="round"/>
     <path d="M 60 80 Q 50 40 70 20" fill="none" stroke="#BC4749" stroke-width="6" stroke-linecap="round"/>
     <path d="M 50 80 L 50 15" fill="none" stroke="#BC4749" stroke-width="6" stroke-linecap="round"/>
-    <!-- Hojas/Raíces -->
     <circle cx="30" cy="20" r="6" fill="#386641" stroke="#2B2B2B" stroke-width="3"/>
     <circle cx="70" cy="20" r="6" fill="#386641" stroke="#2B2B2B" stroke-width="3"/>
     <circle cx="50" cy="15" r="8" fill="#F2A65A" stroke="#2B2B2B" stroke-width="3"/>
-    <!-- Base -->
     <path d="M 25 80 L 75 80" fill="none" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
 </svg>
 
