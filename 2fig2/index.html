@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_cb91e6b1192a1edc41acf51381fb717f {
+                #map_0273cddb345fe9038197abbc0c52d958 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,61 +56,38 @@
     
 <style>
     #leyenda-mapa {
-        position: fixed; 
-        bottom: 30px; 
-        left: 30px; 
-        width: 380px; 
-        max-width: 90vw;
-        background-color: rgba(255, 255, 255, 0.95); 
-        border: 1px solid #d1d8e0; 
-        border-radius: 6px; 
-        padding: 20px; 
-        z-index: 9999; 
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.1); 
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        max-height: 40vh;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        position: fixed; bottom: 30px; left: 30px; width: 380px; max-width: 90vw;
+        background-color: rgba(255, 255, 255, 0.95); border: 1px solid #d1d8e0; border-radius: 6px; 
+        padding: 20px; z-index: 9999; box-shadow: 0px 4px 15px rgba(0,0,0,0.1); 
+        font-family: 'Helvetica Neue', Arial, sans-serif; max-height: 40vh; overflow-y: auto; -webkit-overflow-scrolling: touch;
     }
-    /* Reglas específicas para pantallas de celular */
     @media (max-width: 768px) {
-        #leyenda-mapa {
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 85vw;
-            padding: 15px;
-        }
+        #leyenda-mapa { bottom: 15px; left: 50%; transform: translateX(-50%); width: 85vw; padding: 15px; }
         #leyenda-mapa h3 { font-size: 16px !important; }
         #leyenda-mapa p { font-size: 12px !important; }
-        #leyenda-mapa h4 { font-size: 12px !important; }
-        #leyenda-mapa ul { font-size: 11px !important; }
     }
 </style>
-
 <div id="leyenda-mapa">
-    <h3 style="margin-top: 0; color: #333; font-size: 18px;">Trayectorias Poblacionales</h3>
+    <h3 style="margin-top: 0; color: #333; font-size: 18px;">Regiones de Muestreo Genómico</h3>
     <p style="font-size: 13px; color: #555; line-height: 1.5; text-align: justify;">
-        Comparativa de secuencias genómicas de poblaciones prehispánicas con grupos mestizos actuales. Esto permite reconstruir trayectorias demográficas antes y después del contacto europeo.
+        Ubicación geográfica de las cohortes analizadas. El ADN prehispánico corresponde a yacimientos del Centro de México (limitado a las 4 muestras validadas: ERR9128942, ERR9576891, ERR9169797, ERR9169799), contrastado con poblaciones contemporáneas (MXL).
     </p>
     <div style="background-color: #E2EFDA; padding: 10px; border-left: 4px solid #548235; margin-top: 15px;">
-        <h4 style="margin: 0 0 5px 0; color: #548235; font-size: 13px;">Exploración:</h4>
         <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #333;">
             <li>Pellizque la pantalla para hacer zoom.</li>
-            <li>Arrastre para desplazarse por el territorio.</li>
-            <li><b>Toque los marcadores</b> para ver la muestra.</li>
+            <li><b>Toque los marcadores</b> para ver la procedencia de las muestras.</li>
         </ul>
     </div>
 </div>
     
-            <div class="folium-map" id="map_cb91e6b1192a1edc41acf51381fb717f" ></div>
+            <div class="folium-map" id="map_0273cddb345fe9038197abbc0c52d958" ></div>
         
 </body>
 <script>
     
     
-            var map_cb91e6b1192a1edc41acf51381fb717f = L.map(
-                "map_cb91e6b1192a1edc41acf51381fb717f",
+            var map_0273cddb345fe9038197abbc0c52d958 = L.map(
+                "map_0273cddb345fe9038197abbc0c52d958",
                 {
                     center: [26.5, -108.0],
                     crs: L.CRS.EPSG3857,
@@ -127,7 +104,7 @@
 
         
     
-            var tile_layer_b0d8926f697168896b2a71193cd5c28c = L.tileLayer(
+            var tile_layer_13c01b46d52045c8221d45cc320edce0 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -144,17 +121,17 @@
             );
         
     
-            tile_layer_b0d8926f697168896b2a71193cd5c28c.addTo(map_cb91e6b1192a1edc41acf51381fb717f);
+            tile_layer_13c01b46d52045c8221d45cc320edce0.addTo(map_0273cddb345fe9038197abbc0c52d958);
         
     
-            var marker_d297912996d248da63999af606007753 = L.marker(
-                [19.4326, -99.1332],
+            var marker_d1c163dbbc51ed4cdecf53b69a105758 = L.marker(
+                [19.451, -99.137],
                 {
 }
-            ).addTo(map_cb91e6b1192a1edc41acf51381fb717f);
+            ).addTo(map_0273cddb345fe9038197abbc0c52d958);
         
     
-            var icon_a16d19873ced51b4b50f7a3f9ef7c36f = L.AwesomeMarkers.icon(
+            var icon_da90a09e21964ed92cd24e0d059da3a0 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "darkred",
   "iconColor": "white",
@@ -165,34 +142,72 @@
             );
         
     
-        var popup_9e9405e63a9683b05708ca4d132f94b0 = L.popup({
+        var popup_2e710550e30d96e8acca1854980e4aaf = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_658b0a5f59c5367f44c86fce9ea9eb39 = $(`<div id="html_658b0a5f59c5367f44c86fce9ea9eb39" style="width: 100.0%; height: 100.0%;"> <div style="width: 200px; font-family: 'Helvetica Neue', Arial, sans-serif;">     <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo (Prehispánico)</h4>     <p style="font-size: 12px; color: #333;">Secuencias genómicas anteriores al contacto europeo.</p>     <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Referencia:</b><br>     <a href="https://www.science.org/doi/10.1126/science.add6142" target="_blank" style="color: #C00000; text-decoration: none;">Villa-Islas et al. (2023). <i>Science</i>.</a></p> </div> </div>`)[0];
-                popup_9e9405e63a9683b05708ca4d132f94b0.setContent(html_658b0a5f59c5367f44c86fce9ea9eb39);
+                var html_9b091e7c8157b824fade575cd4980cc9 = $(`<div id="html_9b091e7c8157b824fade575cd4980cc9" style="width: 100.0%; height: 100.0%;">     <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">         <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo</h4>         <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Tlatelolco (Centro de México)</p>         <p style="font-size: 11px; color: #555; margin-top: 0;"><b>Muestras filtradas:</b><br>ERR9128942, ERR9576891</p>         <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> Villa-Islas et al. (2023)</p>     </div>     </div>`)[0];
+                popup_2e710550e30d96e8acca1854980e4aaf.setContent(html_9b091e7c8157b824fade575cd4980cc9);
             
         
 
-        marker_d297912996d248da63999af606007753.bindPopup(popup_9e9405e63a9683b05708ca4d132f94b0)
+        marker_d1c163dbbc51ed4cdecf53b69a105758.bindPopup(popup_2e710550e30d96e8acca1854980e4aaf)
         ;
 
         
     
     
-                marker_d297912996d248da63999af606007753.setIcon(icon_a16d19873ced51b4b50f7a3f9ef7c36f);
+                marker_d1c163dbbc51ed4cdecf53b69a105758.setIcon(icon_da90a09e21964ed92cd24e0d059da3a0);
             
     
-            var marker_774bd4197712d70d983423f263523ba2 = L.marker(
+            var marker_08211f37c80272fc7786ee0dcbc3f21d = L.marker(
+                [19.6922, -98.8436],
+                {
+}
+            ).addTo(map_0273cddb345fe9038197abbc0c52d958);
+        
+    
+            var icon_7f0c3190529c9695a0a46aad66206e30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "landmark",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e29983509ca59dcba1daee25384c6ac = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_13d07a510113ab0a081b5320c1340d00 = $(`<div id="html_13d07a510113ab0a081b5320c1340d00" style="width: 100.0%; height: 100.0%;">     <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">         <h4 style="color: #C00000; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Antiguo</h4>         <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Teotihuacán (Estado de México)</p>         <p style="font-size: 11px; color: #555; margin-top: 0;"><b>Muestras filtradas:</b><br>ERR9169797, ERR9169799</p>         <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> Villa-Islas et al. (2023)</p>     </div>     </div>`)[0];
+                popup_2e29983509ca59dcba1daee25384c6ac.setContent(html_13d07a510113ab0a081b5320c1340d00);
+            
+        
+
+        marker_08211f37c80272fc7786ee0dcbc3f21d.bindPopup(popup_2e29983509ca59dcba1daee25384c6ac)
+        ;
+
+        
+    
+    
+                marker_08211f37c80272fc7786ee0dcbc3f21d.setIcon(icon_7f0c3190529c9695a0a46aad66206e30);
+            
+    
+            var marker_f10ec0ed610cac4e3519d8343f97dd48 = L.marker(
                 [34.0522, -118.2437],
                 {
 }
-            ).addTo(map_cb91e6b1192a1edc41acf51381fb717f);
+            ).addTo(map_0273cddb345fe9038197abbc0c52d958);
         
     
-            var icon_1ca1844d6d327107fc8fc868e0153a30 = L.AwesomeMarkers.icon(
+            var icon_8c2bf2985cf9ff8f210eeb026317ed16 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -203,24 +218,24 @@
             );
         
     
-        var popup_b43de6d014dc4dab5e0f6d6441709939 = L.popup({
+        var popup_a219ff1b4d14f6894afb69e2aa862121 = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_61161f594789220e59a29273a6dfce93 = $(`<div id="html_61161f594789220e59a29273a6dfce93" style="width: 100.0%; height: 100.0%;"> <div style="width: 200px; font-family: 'Helvetica Neue', Arial, sans-serif;">     <h4 style="color: #00B050; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Contemporáneo (MXL)</h4>     <p style="font-size: 12px; color: #333;">Secuencias de grupos mestizos actuales.</p>     <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Referencia:</b><br>     <a href="https://www.nature.com/articles/nature15393" target="_blank" style="color: #00B050; text-decoration: none;">Proyecto 1000 Genomas (2015). <i>Nature</i>.</a></p> </div> </div>`)[0];
-                popup_b43de6d014dc4dab5e0f6d6441709939.setContent(html_61161f594789220e59a29273a6dfce93);
+                var html_9e7a72f8cbccf5bd9f28afb0380f274a = $(`<div id="html_9e7a72f8cbccf5bd9f28afb0380f274a" style="width: 100.0%; height: 100.0%;"> <div style="width: 220px; font-family: 'Helvetica Neue', Arial, sans-serif;">     <h4 style="color: #00B050; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 3px; font-size: 14px;">ADN Contemporáneo</h4>     <p style="font-size: 12px; color: #333; margin-bottom: 4px;"><b>Región:</b> Los Ángeles, California (MXL)</p>     <p style="font-size: 11px; color: #555; margin-top: 0;"><b>Cohorte:</b> Mexicanos en Los Ángeles</p>     <p style="font-size: 11px; background: #f9f9f9; padding: 5px; border-radius: 4px;"><b>Ref:</b> 1000 Genomas (2015)</p> </div> </div>`)[0];
+                popup_a219ff1b4d14f6894afb69e2aa862121.setContent(html_9e7a72f8cbccf5bd9f28afb0380f274a);
             
         
 
-        marker_774bd4197712d70d983423f263523ba2.bindPopup(popup_b43de6d014dc4dab5e0f6d6441709939)
+        marker_f10ec0ed610cac4e3519d8343f97dd48.bindPopup(popup_a219ff1b4d14f6894afb69e2aa862121)
         ;
 
         
     
     
-                marker_774bd4197712d70d983423f263523ba2.setIcon(icon_1ca1844d6d327107fc8fc868e0153a30);
+                marker_f10ec0ed610cac4e3519d8343f97dd48.setIcon(icon_8c2bf2985cf9ff8f210eeb026317ed16);
             
 </script>
 </html>
